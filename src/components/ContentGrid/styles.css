@@ -1,0 +1,12 @@
+.contentContainer{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+.contentItemBox{
+    margin: 1rem;
+}
