@@ -1,10 +1,10 @@
 
-import '../styles/App.css';
+import Search from '../components/SearchField'
 
 function App() {
   return (
     <div className="App">
-      Home
+      <Search />
     </div>
   );
 }

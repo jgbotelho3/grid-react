@@ -1,0 +1,28 @@
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.selectField{
+    width: 20rem;
+    height: 2rem;
+}
+
+.findBtn{
+    outline: none;
+    border: none;
+    color: #fafafa;
+    text-transform: uppercase;
+    background: #9A3D37;
+    margin-left: 1rem;
+    width: 10rem;
+    height: 2rem;
+}
+
+.findBtn:hover{
+    cursor: pointer;
+    background: #7A1D17;
+}
+
