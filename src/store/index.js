@@ -1,8 +1,9 @@
 import {createStore, combineReducers} from 'redux'
-import filterReducer from './MassiveData/Filter.reducer'
+import filterReducer from './Data/Filter.reducer'
 
 const rootReducer = combineReducers({
     data: filterReducer
+   
 })
 
 const store = createStore(rootReducer,

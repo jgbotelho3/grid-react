@@ -6,8 +6,16 @@
 }
 
 .selectField{
-    width: 20rem;
+    width: 10rem;
     height: 2rem;
+}
+
+.searchInputField{
+    width: 10rem;
+    height:1.6rem;
+    margin-left: 0.8rem;
+    outline: none;
+    border: none;
 }
 
 .findBtn{

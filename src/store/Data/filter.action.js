@@ -10,3 +10,11 @@ export function selectProductsByName (productName) {
         payload: productName
     }
 }
+
+export function selectProductsByOrigin (originName) {
+    return{
+        type: 'LIST_BY_ORIGIN',
+        payload: originName
+    }
+}
+
