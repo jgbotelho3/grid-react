@@ -1,5 +1,5 @@
 
-import Search from '../components/SearchField'
+import Search from './SearchField'
 import ContentGrid from './ContentGrid'
 
 function App() {
