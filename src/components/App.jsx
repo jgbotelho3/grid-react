@@ -1,4 +1,3 @@
-
 import Search from './SearchField'
 import ContentGrid from './ContentGrid'
 

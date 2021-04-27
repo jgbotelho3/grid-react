@@ -10,3 +10,28 @@
 .contentItemBox{
     margin: 1rem;
 }
+
+.contentItem{
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22rem;
+    height: 4rem;
+    padding: 0.8rem;
+    border-radius: 2px;
+}
+
+.contentItem:hover{
+    background: #EFEFEF;
+}
+
+.contentDivisor{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+strong{
+    color: #347099;
+}
