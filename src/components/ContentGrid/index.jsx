@@ -19,7 +19,10 @@ const ContentGrid = () => {
     }
 
     const _handleSearchInputField = (event) => {
-        setInputSearchField(event.target.value)
+        inputSelectField === 'quantity' 
+        ? setInputSearchField(Number(event.target.value)) 
+        :  setInputSearchField(event.target.value)
+    
     }
 
     const _renderedItems = 
