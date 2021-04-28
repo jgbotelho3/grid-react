@@ -1,36 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {selectProductsByOrigin, selectProductsByName} from '../../store/Data/filter.action'
-import {getByProduct} from '../../store/Data/Filter.selectors'
+import {selectProducts} from '../../store/Data/filter.action'
+import {getItem} from '../../store/Data/Filter.selectors'
 
 import './styles.css'
 
 const ContentGrid = () => {
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
     const [inputSelectField, setInputSelectField] = useState('')
     const [inputSearchField, setInputSearchField] = useState('')
-
-    const items = useSelector(getByProduct(inputSearchField))
-
-    function _handleSubmit (event) {
-        event.preventDefault();
-
-        switch (inputSelectField) {
-            case 'product':
-                dispatch(selectProductsByName(inputSearchField))
-                return 
-            
-            case 'origin':
-                dispatch(selectProductsByOrigin(inputSearchField))
-                return
-        
-            default:
-                break;
-        }
-    }
-
+ 
+    const items = useSelector(getItem(inputSearchField,inputSelectField ))
+    
     const _handleSelectInput = (event) => {
         setInputSelectField(event.target.value)
     }
@@ -42,7 +25,7 @@ const ContentGrid = () => {
     const _renderedItems = 
     Object.values(items).length > 0 ? Object.values(items).map((item, index) => {
         return(
-            <div className="contentItemBox">
+            <div className="contentItemBox" key={index}>
                 <section className="contentItem" key={index}>
                 <div className="contentDivisor">
                     <span>Product: <strong>{item.product}</strong></span>
@@ -61,28 +44,26 @@ const ContentGrid = () => {
 
         )
     }) : null
-
     return(
         <>
         
         <div className="searchContainer">
 
-        <select value={inputSelectField} name='options' id="options" className="selectField" onChange={
+        <select name='options' id="options" className="selectField" onChange={
             _handleSelectInput}>
             <option value="">Choose the column</option>
             <option value="product">Product</option>
+            <option value="quantity">Quantity</option>
+            <option value="price">Price</option>
+            <option value="type">Type</option>
+            <option value="industry">Industry</option>
             <option value="origin">Origin</option>
         </select>
-        <input type="text" placeholder="Typing the search" className="searchInputField" onBlur={_handleSearchInputField}/>
-            <button className="findBtn" onClick={_handleSubmit}>Find</button>
+        <input type="text" placeholder="Typing the search" className="searchInputField" onChange={_handleSearchInputField}/>
+            {/* <button className="findBtn" onClick={_handleSubmit}>Find</button> */}
         </div>
-        <section className="contentContainer">
-           
-                {_renderedItems}
-   
-            
-
-
+        <section className="contentContainer">    
+            {_renderedItems}
         </section>
           
          </>

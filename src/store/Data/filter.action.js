@@ -4,17 +4,14 @@ export function listAllItems() {
     }
 }
 
-export function selectProductsByName (productName) {
+export function selectProducts (item, column) {
     return{
-        type: 'LIST_BY_PRODUCT',
-        payload: productName
+        type: 'LIST_ITEMS',
+        payload: {
+            item,
+            column
+        }
     }
 }
 
-export function selectProductsByOrigin (originName) {
-    return{
-        type: 'LIST_BY_ORIGIN',
-        payload: originName
-    }
-}
 

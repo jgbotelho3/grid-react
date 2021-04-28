@@ -6,14 +6,9 @@ export default function (state = mock.data, action) {
         case 'LIST_ALL':
             return state
 
-        case 'LIST_BY_PRODUCT':
-            const result = state.filter((item) => item.product === action.payload)
-            console.log(result)
-            return result
+        case 'LIST_ITEMS':            
+            return state.filter((item) => item[action.payload.column] === action.payload.item)
         
-        case 'LIST_BY_ORIGIN':
-            return state.filter((item) => item.origin === action.payload)
-
         default:
            return state
     }
