@@ -1,4 +1,4 @@
-import ContentGrid from './ContentGrid'
+import ContentGrid from './Grid'
 
 function App() {
   return (
