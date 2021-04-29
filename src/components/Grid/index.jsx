@@ -60,7 +60,6 @@ const ContentGrid = () => {
             <option value="origin">Origin</option>
         </select>
         <input type="text" placeholder="Typing the search" className="searchInputField" onChange={_handleSearchInputField}/>
-            {/* <button className="findBtn" onClick={_handleSubmit}>Find</button> */}
         </div>
         <section className="contentContainer">    
             {_renderedItems}
