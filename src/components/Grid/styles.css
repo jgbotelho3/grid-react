@@ -1,0 +1,59 @@
+.contentContainer{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contentItemBox{
+    margin: 1rem;
+}
+
+.contentItem{
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22rem;
+    min-height: 4rem;
+    padding: 0.8rem;
+    border-radius: 2px;
+}
+
+.contentItem:hover{
+    background: #EFEFEF;
+}
+
+.contentDivisor{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+strong{
+    color: #347099;
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.selectField{
+    width: 10rem;
+    height: 2rem;
+}
+
+.searchInputField{
+    width: 10rem;
+    height:1.6rem;
+    margin-left: 0.8rem;
+    outline: none;
+    border: none;
+}
+
+
